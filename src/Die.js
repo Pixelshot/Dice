@@ -3,7 +3,13 @@ import "./Die.css";
 
 class Die extends Component {
   render() {
-    return <i className={`fas fa-dice-${this.props.face} Die`} />;
+    return (
+      <i
+        className={`fas fa-dice-${this.props.face} 
+          Die 
+          ${this.props.rolling ? "shaking" : ""}`}
+      />
+    );
   }
 }
 
